@@ -140,7 +140,7 @@
 </executions>
 </plugin>
 		</plugins>
-		<finalName>authorizationmicroservice</finalName>
+		<finalName>authorization-microservice</finalName>
 	</build>
 	<dependencyManagement>
 		<dependencies>
