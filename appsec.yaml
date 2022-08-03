@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/pms-pst-authorization-taskdef:1"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/swadesh-pen-task:1"
         LoadBalancerInfo:
-          ContainerName: "pst-authorization-container"
+          ContainerName: "swadesh-pen-container"
           ContainerPort: "8081"
         PlatformVersion: "LATEST"
