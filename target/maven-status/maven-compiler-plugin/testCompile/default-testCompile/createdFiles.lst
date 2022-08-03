@@ -1,0 +1,6 @@
+com\pension\authorization\exception\ExceptionControllerTest.class
+com\pension\authorization\dao\UserDaoTest.class
+com\pension\authorization\controller\AuthControllerTest.class
+com\pension\authorization\service\MyUserServiceTest.class
+com\pension\authorization\controller\ActuatorControllerTest.class
+com\pension\authorization\model\UserTest.class
