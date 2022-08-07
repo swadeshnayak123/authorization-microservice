@@ -16,14 +16,14 @@ phases:
       - mvn clean package
       - echo Building the docker image
       - docker build -t authorization-microservice .
-      - docker tag authorization-microservice 860061945305.dkr.ecr.ap-south-1.amazonaws.com/swadesh-pension-management-system-repo:authorization-microservice
+      - docker tag authorization-microservice 860061945305.dkr.ecr.ap-south-1.amazonaws.com/swadesh-pms-repo:authorization-microservice
   post_build:
     commands:
       - echo Build completed on `date`
       - echo $(docker images)
-      - docker push 860061945305.dkr.ecr.ap-south-1.amazonaws.com/swadesh-pension-management-system-repo:authorization-microservice
+      - docker push 860061945305.dkr.ecr.ap-south-1.amazonaws.com/swadesh-pms-repo:authorization-microservice
       - echo Writing definition files
-      - printf '[{"name":"swadesh-pen-container","imageUri":"%s"}]' 860061945305.dkr.ecr.ap-south-1.amazonaws.com/swadesh-pension-management-system-repo:authorization-microservice > taskdefinition.json
+      - printf '[{"name":"swadesh-authorization-container","imageUri":"%s"}]' 860061945305.dkr.ecr.ap-south-1.amazonaws.com/swadesh-pms-repo:authorization-microservice > taskdefinition.json
 
 artifacts:
   files: taskdefinition.json
