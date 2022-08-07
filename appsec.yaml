@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/swadesh-pen-task:1"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/swadesh-authorization-task:1"
         LoadBalancerInfo:
-          ContainerName: "swadesh-pen-container"
+          ContainerName: "swadesh-authorization-container"
           ContainerPort: "8081"
         PlatformVersion: "LATEST"
